@@ -2,39 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+/* YalaLike Design System - Thai Tourism Inspired 
 All colors MUST be HSL.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 47 88% 96%;
+    --foreground: 20 14% 4%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 20 14% 4%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 20 14% 4%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Thai-inspired primary (golden temple) */
+    --primary: 42 87% 55%;
+    --primary-foreground: 355 25% 3%;
+    --primary-glow: 42 95% 65%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Thai-inspired secondary (emerald temple) */
+    --secondary: 158 64% 52%;
+    --secondary-foreground: 0 0% 100%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 45 25% 95%;
+    --muted-foreground: 25 5% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent (Thai sunset orange) */
+    --accent: 15 86% 65%;
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 45 23% 87%;
+    --input: 45 23% 87%;
+    --ring: 42 87% 55%;
+
+    /* Travel-specific colors */
+    --travel-blue: 204 94% 48%;
+    --travel-coral: 14 91% 67%;
+    --travel-sage: 84 19% 52%;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--accent)));
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--muted)));
+    --gradient-sunset: linear-gradient(180deg, hsl(var(--accent)) 0%, hsl(var(--primary)) 100%);
+    
+    /* Shadows */
+    --shadow-card: 0 4px 12px hsl(var(--primary) / 0.15);
+    --shadow-hover: 0 8px 25px hsl(var(--primary) / 0.25);
+    --shadow-glow: 0 0 30px hsl(var(--primary-glow) / 0.4);
 
     --radius: 0.5rem;
 
