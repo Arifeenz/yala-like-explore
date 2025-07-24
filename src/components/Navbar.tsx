@@ -43,11 +43,27 @@ const Navbar = () => {
 
           {/* Login Button - Desktop */}
           <div className="hidden md:flex items-center space-x-4">
-            <Link to="/profile">
+            <div className="relative group">
               <Button variant="ghost" className="text-muted-foreground hover:text-primary">
                 Profile
               </Button>
-            </Link>
+              <div className="absolute right-0 mt-2 w-48 bg-card border border-border rounded-md shadow-card opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                <div className="py-2">
+                  <Link 
+                    to="/profile" 
+                    className="block px-4 py-2 text-sm text-foreground hover:bg-muted transition-colors"
+                  >
+                    🧳 นักท่องเที่ยว
+                  </Link>
+                  <Link 
+                    to="/community-profile" 
+                    className="block px-4 py-2 text-sm text-foreground hover:bg-muted transition-colors"
+                  >
+                    🏪 ชุมชน/ธุรกิจ
+                  </Link>
+                </div>
+              </div>
+            </div>
             <Link to="/login">
               <Button variant="default">Login</Button>
             </Link>
@@ -78,12 +94,17 @@ const Navbar = () => {
               </Link>
             ))}
             <div className="pt-4 border-t border-border space-y-2">
-              <Link to="/profile" className="block">
+              <Link to="/profile" className="block" onClick={() => setIsMenuOpen(false)}>
                 <Button variant="ghost" className="w-full justify-start">
-                  Profile
+                  🧳 นักท่องเที่ยว
                 </Button>
               </Link>
-              <Link to="/login" className="block">
+              <Link to="/community-profile" className="block" onClick={() => setIsMenuOpen(false)}>
+                <Button variant="ghost" className="w-full justify-start">
+                  🏪 ชุมชน/ธุรกิจ
+                </Button>
+              </Link>
+              <Link to="/login" className="block" onClick={() => setIsMenuOpen(false)}>
                 <Button className="w-full">Login</Button>
               </Link>
             </div>

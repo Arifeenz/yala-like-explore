@@ -10,6 +10,9 @@ import PlaceDetail from "./pages/PlaceDetail";
 import Upload from "./pages/Upload";
 import Admin from "./pages/Admin";
 import Profile from "./pages/Profile";
+import CommunityProfile from "./pages/CommunityProfile";
+import UpdatePlace from "./pages/UpdatePlace";
+import AIAssistant from "./pages/AIAssistant";
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import NotFound from "./pages/NotFound";
@@ -29,9 +32,12 @@ const App = () => (
           <Route path="/place/:id" element={<PlaceDetail />} />
           <Route path="/upload" element={<Upload />} />
           <Route path="/admin" element={<Admin />} />
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/community-profile" element={<CommunityProfile />} />
+        <Route path="/update/:id" element={<UpdatePlace />} />
+        <Route path="/ai-assistant" element={<AIAssistant />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
