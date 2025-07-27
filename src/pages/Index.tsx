@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { MapPin, Star, Users, TrendingUp, Quote } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
+import ChatbotWidget from "@/components/ChatbotWidget";
 import heroImage from "@/assets/hero-yala.jpg";
 
 const Index = () => {
@@ -327,6 +328,9 @@ const Index = () => {
           </div>
         </div>
       </footer>
+      
+      {/* Chatbot Widget */}
+      <ChatbotWidget />
     </div>
   );
 };
